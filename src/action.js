@@ -13,7 +13,7 @@ async function go(){
     const { results } = await response.json();
     const gifUrl = results[0].media[0].tinygif.url;
 
-    const octokit = new github.GitHub(GITHUB_TOKEN);
+    const octokit = github.getOctokit(GITHUB_TOKEN);
 
     const { contex = {} } = github;
     const { pull_request } = contex.payload;
@@ -21,8 +21,8 @@ async function go(){
     await octokit.issues.createComment({
         ...context.repo,
         issue_number: pull_request.number,
-        body: `Obrigado por submeter um pull request!.\n\n <img src="${gifUrl}" alt="muito obrigado"/>`
-    });
+        body: `Thank you for submitting a pull request! We will try to review this as soon as we can.\n\n<img src="${gifUrl}" alt="thank you" />`
+      });
 }
 
 go();
