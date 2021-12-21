@@ -1,0 +1,23 @@
+{
+  "name": "obrigado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build src/action.js -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinicius-hora/obrigado.git"
+  },
+  "author": "Vinicius Hora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinicius-hora/obrigado/issues"
+  },
+  "homepage": "https://github.com/vinicius-hora/obrigado#readme",
+  "dependencies": {
+    "@vercel/ncc": "^0.33.1"
+  }
+}

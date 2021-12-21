@@ -1,0 +1,16 @@
+name: 'Muito obrigado'
+description: 'Obrigado pelo novo pull requests'
+
+#definição dos tokens
+inputs:
+  GITHUB_TOKEN: 
+    description: 'GITHUB_TOKEN'
+    required: true
+  TENOR_TOKEN: 
+    description: 'TENOR_TOKEN'
+    required: true
+
+#comandos
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
